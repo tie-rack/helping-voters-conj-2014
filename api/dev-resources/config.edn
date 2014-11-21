@@ -1,0 +1,2 @@
+{:datomic {:uri "datomic:dev://localhost:4334/mailing-api"
+           :partition :mailing-api}}

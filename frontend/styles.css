@@ -1,0 +1,23 @@
+body {
+  font-family: sans-serif;
+}
+
+h2, h3, h4 {
+  background-color: #eee;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 0;
+  margin-bottom: 13px;
+}
+
+h2:before {
+  content: "Name: "
+}
+
+h3:before {
+  content: "Status: "
+}
+
+h4:before {
+  content: "Serial number: "
+}

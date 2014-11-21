@@ -1,0 +1,31 @@
+[
+ ;; partner
+ {:db/id #db/id[:mailing-api -1]
+  :partner/name "Seed Partner"
+  :partner/id 1}
+
+ ;; mailing
+ {:db/id #db/id[:mailing-api -2]
+  :mailing/firstname "Henry"
+  :mailing/lastname "Seedinger"
+  :mailing/partner #db/id[:mailing-api -1]
+  :mailing/serial-number "000000000"}
+
+ ;; mailing
+ {:db/id #db/id[:mailing-api -3]
+  :mailing/firstname "Jane"
+  :mailing/lastname "Seedinger"
+  :mailing/partner #db/id[:mailing-api -1]
+  :mailing/serial-number "000000001"}
+
+ ;; scans
+ {:db/id #db/id[:mailing-api -4]
+  :scan/mailing #db/id[:mailing-api -2]
+  :scan/status "Prepared for mailing"
+  :scan/time #inst "2014-08-27"}
+
+ {:db/id #db/id[:mailing-api -5]
+  :scan/mailing #db/id[:mailing-api -2]
+  :scan/status "Received by carrier"
+  :scan/time #inst "2014-08-31"}
+ ]

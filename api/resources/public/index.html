@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Hi</title>
+  </head>
+  <body>
+    <h1>Testing SSE</h1>
+    <script type="text/javascript">
+      var source = new EventSource("/events");
+
+      source.addEventListener("2n", function(e) {
+        console.log(e.data);
+      }, false);
+
+      source.addEventListener("open", function(e) {console.log("opened");}, false);
+      source.addEventListener("close", function(e) {console.log("closed");}, false);
+    </script>
+  </body>
+<html>

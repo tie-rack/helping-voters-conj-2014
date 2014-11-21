@@ -1,0 +1,67 @@
+[
+  ;; Partner
+  {:db/id #db/id[:db.part/db]
+  :db/ident :partner/name
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "Partner name"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id #db/id[:db.part/db]
+  :db/ident :partner/id
+  :db/valueType :db.type/long
+  :db/cardinality :db.cardinality/one
+  :db/doc "ID for the partner"
+  :db.install/_attribute :db.part/db}
+
+  ;; Mailing
+ {:db/id #db/id[:db.part/db]
+  :db/ident :mailing/firstname
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "First name"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id #db/id[:db.part/db]
+  :db/ident :mailing/lastname
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "Last name"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id #db/id[:db.part/db]
+  :db/ident :mailing/partner
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/one
+  :db/doc "Partner"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id #db/id[:db.part/db]
+  :db/ident :mailing/serial-number
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "Serial number"
+  :db.install/_attribute :db.part/db}
+
+  ;; USPS scan
+ {:db/id #db/id[:db.part/db]
+  :db/ident :scan/mailing
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/one
+  :db/doc "Mailing for scan"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id #db/id[:db.part/db]
+  :db/ident :scan/status
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "Status"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id #db/id[:db.part/db]
+  :db/ident :scan/time
+  :db/valueType :db.type/instant
+  :db/cardinality :db.cardinality/one
+  :db/doc "Time of scan"
+  :db.install/_attribute :db.part/db}
+ ]
